@@ -1,7 +1,6 @@
 <script>
     import titlecard from "/src/assets/titlecard.jpg"
-    export let title;
-    export let subTitle;
+    import {title, subTitle} from "../stores.js"
 </script>
 
 <div class="uk-width-2-3@m  uk-card uk-card-default uk-padding-small uk-visible@m">
@@ -11,14 +10,14 @@
         </div>
         <div class="uk-width-expand@m uk-text-left">
             <div class="title">
-                {title}
+                {$title}
             </div>
             <div class="uk-text-muted uk-text-small">
-                {subTitle}
+                {$subTitle}
             </div>
         </div>
         <div class="uk-card uk-card-small uk-text-center uk-padding-remove">
-            <a target="_blank" href="https://github.com/wit-hdip-comp-sci-2020/donation-svelte">
+            <a target="_blank" href="https://github.com/CianFD/EntWebDev-Svelte-POI2">
                 <div>
                     <i class="fas fa-donate fa-3x" style="color:rgb(95, 96, 173)" title="Source repo" pos="bottom" uk-tooltip></i>
                 </div>

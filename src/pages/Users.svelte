@@ -1,6 +1,13 @@
 <script>
     import UserList from "../components/UserList.svelte";
     import user from "/src/assets/user.png";
+    import {navBar, mainBar, subTitle, title} from "../stores"
+
+    title.set("Users");
+    subTitle.set("List of Users Registered");
+    navBar.set({
+        bar: mainBar
+    });
 </script>
 
 <div class="uk-text-center" uk-grid>
