@@ -3,7 +3,8 @@
   import {PoiService} from "./services/poi-service";
   import Users from "./pages/Users.svelte";
   import Main from "./pages/Main.svelte";
-  import Login from "./pages/Login.svelte"
+  import Login from "./pages/Login.svelte";
+  import AddPoi from "./pages/AddPoi.svelte"
   import Pois from "./pages/Pois.svelte";
   import Navigator from "./components/Navigator.svelte";
   import Router from "svelte-spa-router";
@@ -13,6 +14,7 @@
   let routes = {
     "/" : Main,
     "/login": Login,
+    "/add": AddPoi,
     "/users": Users,
     "/pois": Pois,
     "/logout" : Main,

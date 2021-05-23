@@ -1,5 +1,5 @@
 <script>
-    import {title, subTitle, navBar, welcomeBar} from "../stores";
+    import {title, subTitle, navBar, welcomeBar, } from "../stores";
     import LoginForm from "../components/LoginForm.svelte";
     import login from "/src/assets/login.jpg";
     title.set("Islands of Ireland");

@@ -4,7 +4,7 @@ export const mainBar = [{
     title: "AddPOI",
     icon: "fas fa-location-arrow fa-3x",
     colour: "color:rgb(153, 196, 74)",
-    link: "/#/users",
+    link: "/#/add",
 }, {
     title: "Report",
     icon: "fas fa-clipboard-list fa-3x",
@@ -31,6 +31,14 @@ export const welcomeBar = [
         link: "/#/login",
     },
 ];
+
+export const user = writable({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    _id: ""
+});
 
 export const navBar = writable({
     bar: [],
