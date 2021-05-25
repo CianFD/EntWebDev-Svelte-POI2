@@ -3,7 +3,6 @@
     import {getContext} from "svelte";
     const poiService = getContext("PoiService");
 
-
     let email = ""
     let password = "";
     let errorMessage = "";
@@ -11,14 +10,13 @@
     async function login() {
         let success = await poiService.login(email, password)
         if (success) {
-            push("/pois");
+            push("/add");
         } else {
             email = "";
             password = "";
             errorMessage = "Invalid Credentials";
         }
     }
-
 </script>
 
 <form on:submit|preventDefault={login}>

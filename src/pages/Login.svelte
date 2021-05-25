@@ -1,8 +1,8 @@
 <script>
-    import {title, subTitle, navBar, welcomeBar, } from "../stores";
-    import LoginForm from "../components/LoginForm.svelte";
+    import {title, subTitle, navBar, welcomeBar} from "../stores"
+    import LoginForm from "../components/LoginForm.svelte"
     import login from "/src/assets/login.jpg";
-    title.set("Islands of Ireland");
+    title.set("Islands of Ireland Guide");
     subTitle.set("Please Log in");
 
     navBar.set({
@@ -18,6 +18,6 @@
         </div>
     </div>
     <div class="uk-width-1-3@m ">
-        <img width="300" src="{login}" alt="login">
+        <img width="300" src="{login}" alt="homer">
     </div>
 </div>
