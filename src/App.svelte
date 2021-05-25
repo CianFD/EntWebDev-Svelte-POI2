@@ -4,6 +4,7 @@
   import Users from "./pages/Users.svelte";
   import Main from "./pages/Main.svelte";
   import Login from "./pages/Login.svelte";
+  import Signup from "./pages/Signup.svelte"
   import AddPoi from "./pages/AddPoi.svelte"
   import Pois from "./pages/Pois.svelte";
   import Navigator from "./components/Navigator.svelte";
@@ -14,6 +15,7 @@
   let routes = {
     "/" : Main,
     "/login": Login,
+    "/signup" : Signup,
     "/add": AddPoi,
     "/users": Users,
     "/pois": Pois,

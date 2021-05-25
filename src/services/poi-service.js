@@ -40,17 +40,33 @@ export class PoiService {
     }
   }
 
-  async addPoi(name, description, longitude, latitude, user) {
+  async addPoi(name, description, longitude, latitude) {
     try {
       const poi = {
         name: name,
         description: description,
         longitude: longitude,
         latitude: latitude,
-        creator: user,
       };
-      const response = await axios.post(this.baseUrl + "/api/users/" + user._id + "/pois", poi);
+      const response = await axios.post(this.baseUrl + "/api/" + user._id + "/pois", poi);
       return response.status == 200;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  async signup(firstName, lastName, email, password) {
+    try {
+      const userDetails = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+      };
+      const response = await axios.post(this.baseUrl + "/api/users", userDetails);
+      const newUser = await response.data;
+      user.set(newUser);
+      return true;
     } catch (error) {
       return false;
     }
