@@ -1,4 +1,5 @@
 import axios from "axios";
+import { user } from "../stores.js"
 
 export class PoiService {
   poiList = [];
