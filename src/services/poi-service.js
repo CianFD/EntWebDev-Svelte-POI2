@@ -72,4 +72,13 @@ export class PoiService {
     }
   }
 
+  async logout() {
+    user.set({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: ""
+    });
+  }
+
 }
