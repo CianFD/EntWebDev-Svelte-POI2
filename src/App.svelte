@@ -4,8 +4,9 @@
   import Users from "./pages/Users.svelte";
   import Main from "./pages/Main.svelte";
   import Login from "./pages/Login.svelte";
-  import Signup from "./pages/Signup.svelte"
-  import AddPoi from "./pages/AddPoi.svelte"
+  import Signup from "./pages/Signup.svelte";
+  import Settings from "./pages/Settings.svelte";
+  import AddPoi from "./pages/AddPoi.svelte";
   import Pois from "./pages/Pois.svelte";
   import Navigator from "./components/Navigator.svelte";
   import Router from "svelte-spa-router";
@@ -20,6 +21,7 @@
     "/users": Users,
     "/pois": Pois,
     "/logout" : Main,
+    "/settings" : Settings,
   }
 
 </script>

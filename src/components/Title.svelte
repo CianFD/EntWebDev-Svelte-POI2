@@ -8,7 +8,7 @@
         <div class="uk-width-1-6@m">
             <a href="/"> <img src="{titlecard}" width="60" alt="img"/> </a>
         </div>
-        <div class="uk-text-muted uk-text-center" style="font-size:xx-small">{$user.firstName} {$user.lastName}</div>
+        <div class="uk-text-muted uk-text-center" style="font-size:xx-small">Welcome {$user.email}</div>
         <div class="uk-width-expand@m uk-text-left">
             <div class="title">
                 {$title}
