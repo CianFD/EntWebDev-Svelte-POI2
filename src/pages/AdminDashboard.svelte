@@ -4,7 +4,7 @@
 
     import {navBar, adminBar, subTitle, title} from "../stores"
 
-    title.set("Admin Dashboard");
+    title.set("Admin Staff Dashboard");
     subTitle.set("View POIs Added and Users Registered");
     navBar.set({
         bar: adminBar
