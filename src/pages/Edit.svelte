@@ -1,7 +1,7 @@
 <script>
     import {mainBar, navBar, subTitle, title} from "../stores";
     import settingsicon from "/src/assets/settingsicon.png";
-    import UpdateUser from "../components/UpdateUser.svelte";
+    import EditPoi from "../components/EditPoi.svelte";
 
     title.set("POI Island Guide");
     subTitle.set("Edit and then save your settings");
@@ -18,7 +18,7 @@
     <div class="uk-width-1-2@m">
         <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large uk-width-2xlarge">
             <h3 class="uk-card-title uk-text-center">Edit any entry and press save</h3>
-            <UpdateUser/>
+            <EditPoi/>
         </div>
     </div>
 </div>

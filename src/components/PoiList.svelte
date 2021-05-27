@@ -6,7 +6,9 @@
   let poiList;
   onMount(async () => {
     poiList = await poiService.getPois()
-  })
+  });
+
+
 </script>
 
 <h3 class="uk-heading-divider">
@@ -18,6 +20,8 @@
     <th>Latitude</th>
     <th>Longitude</th>
     <th>Description</th>
+    <th></th>
+    <th></th>
     </thead>
     <tbody class="uk-text-left">
       {#if poiList}
@@ -27,6 +31,7 @@
             <td>{poi.latitude}</td>
             <td>{poi.longitude}</td>
             <td>{poi.description}</td>
+            <td><a href="/#/pois/{poi._id}"><i class="fas fa-edit fa-3x" style="color:rgb(238,165,19)"></i></a></td>
           </tr>
         {/each}
       {/if}

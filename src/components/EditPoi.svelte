@@ -1,32 +1,29 @@
-<script lang="ts">
-    import { onMount, getContext } from "svelte";
-    import {push} from "svelte-spa-router";
-    const poiService = getContext("PoiService");
-    import { user } from "../stores";
+<script>
+    import {getContext} from "svelte";
 
     let name = "";
+    let description = "";
     let latitude = 0;
     let longitude = 0;
-    let description = "";
-    let errorMessage = "";
-    let poiuser = { user };
+    let message = "";
 
-    async function addPoi() {
-        const creator = poiuser;
-        const success = await poiService.addPoi(name, latitude, longitude, description, creator);
+    const poiService = getContext("PoiService");
+
+    async function savePoi() {
+        let success = await poiService.editPoi(name, description, latitude, longitude)
         if (success) {
-            push("/pois");
+            message = "Poi updated";
         } else {
-            errorMessage = "Unable to Add POI - some error occurred";
+            message = "Error Trying to save Poi";
         }
     }
 </script>
 
-<form on:submit|preventDefault={addPoi} class="uk-form-stacked uk-text-left">
+<form on:submit|preventDefault={savePoi} class="uk-form-stacked uk-text-left">
     <div class="uk-grid uk-grid-stack">
         <div class="uk-width-1-1">
             <div class="uk-margin">
-                <label class="uk-form-label">Add New POI</label>
+                <label class="uk-form-label">Edit POI</label>
                 <div class="uk-inline uk-width-1-1">
                     <label class="uk-form-label">Name</label>
                     <span class="uk-form-icon" uk-icon="icon: empty"></span>
